@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".do_exc">
+    <ImageView
+        android:id="@+id/current_img"
+        android:layout_width="0dp"
+        android:layout_height="259dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/round_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.052"
+        app:srcCompat="@drawable/butterfly_situp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
+        android:layout_width="123dp"
+        android:background="@color/cardview_light_background"
+        android:layout_height="121dp"
+        app:cardCornerRadius="80dp"
+        app:cardElevation="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/current_img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/current_img">
+
+        <TextView
+            android:id="@+id/count_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="monospace"
+            android:text="35"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="80sp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btn_pause"
+        android:layout_width="133dp"
+        android:layout_height="51dp"
+        android:text="PAUSE"
+        android:fontFamily="monospace"
+        android:textColor="@color/white"
+        android:background="@drawable/round_button"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_cont"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView3" />
+
+    <Button
+        android:id="@+id/btn_cont"
+        android:layout_width="139dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="200dp"
+        android:background="@drawable/round_button"
+        android:text="CONTINUE"
+        android:fontFamily="monospace"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_cont"
+        app:layout_constraintVertical_bias="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
